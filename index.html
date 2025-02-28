@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cesta de Bolinhas</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Importar bibliotecas via CDN -->
+    <script async src="https://unpkg.com/es-module-shims@1.8.0/dist/es-module-shims.js"></script>
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.174.0/build/three.module.js",
+            "three/examples/jsm/controls/OrbitControls": "https://unpkg.com/three@0.174.0/examples/jsm/controls/OrbitControls.js",
+            "cannon-es": "https://unpkg.com/cannon-es@0.20.0/dist/cannon-es.js",
+            "dat.gui": "https://unpkg.com/dat.gui@0.7.9/build/dat.gui.module.js"
+        }
+    }
+    </script>
+</head>
+<body>
+    <div id="score">Pontos: 0</div>
+    <div id="timer">Tempo: 60s</div>
+    <div id="level">Nível 1: Iniciante</div>
+    <div id="target">Objetivo: 30 pontos</div>
+
+    <div id="startScreen">
+        <h1 class="title">Cesta de Bolinhas</h1>
+        <div class="instructions">
+            <p>Mova o mouse para controlar a cesta</p>
+            <p>Pegue as bolinhas para marcar pontos</p>
+            <p>Bolinhas especiais valem <span class="special-text">3 pontos</span></p>
+        </div>
+        <button id="startButton">Jogar</button>
+    </div>
+
+    <div id="gameOverScreen">
+        <h2 class="game-over-title">Fim de Jogo</h2>
+        <div class="final-score">0</div>
+        <div class="stats">
+            <p>Bolas Capturadas: <span id="ballsCaught">0</span></p>
+            <p>Bolas Especiais: <span id="specialBallsCaught">0</span></p>
+            <p>Tempo Total: <span id="totalTime">0</span>s</p>
+        </div>
+        <button id="playAgainButton">Jogar Novamente</button>
+    </div>
+
+    <div id="levelCompleteScreen" class="modal">
+        <h2 class="level-complete-title">Nível Completo!</h2>
+        <div class="level-stats">
+            <p>Pontuação: <span id="levelScore">0</span></p>
+            <p>Tempo Restante: <span id="levelTime">0</span>s</p>
+            <p>Bolas Capturadas: <span id="levelBalls">0</span></p>
+        </div>
+        <div class="next-level-preview">
+            <h3>Próximo Nível: <span id="nextLevelName"></span></h3>
+            <ul id="nextLevelChallenges"></ul>
+        </div>
+        <button id="nextLevelButton">Próximo Nível</button>
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
