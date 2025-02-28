@@ -20,7 +20,7 @@ Um jogo 3D envolvente onde você controla uma cesta espacial e captura bolinhas 
 
 <div align="center">
 
-![Gameplay](assets/images/gameplay.gif)
+![Gameplay](assets/images/gameplay.gif.gif)
 
 </div>
 
