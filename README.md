@@ -9,7 +9,6 @@
 [![Three.js](https://img.shields.io/badge/Three.js-Latest-black.svg)](https://threejs.org/)
 [![Cannon.js](https://img.shields.io/badge/Cannon.js-Physics-red.svg)](https://github.com/schteppe/cannon.js)
 
-[🎯 Demo](#) | [📖 Documentação](#documentação) | [🚀 Instalação](#instalação) | [💡 Como Jogar](#como-jogar) | [🤝 Contribua](#contribuindo)
 
 ---
 
