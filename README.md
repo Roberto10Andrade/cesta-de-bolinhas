@@ -4,9 +4,9 @@
 
 ![Logo do Jogo](assets/images/logo.png)
 
-[[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow.svg)](https://www.javascript.com/)](https://shields.io/badge/JavaScript-F7DF1E?logo=JavaScript&logoColor=000&style=flat-square)
-[![Three.js](https://img.shields.io/badge/Three.js-Latest-black.svg)](https://threejs.org/)
-[![Cannon.js](https://img.shields.io/badge/Cannon.js-Physics-red.svg)](https://github.com/schteppe/cannon.js)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=flat-square)](https://www.javascript.com/)
+[![Three.js](https://img.shields.io/badge/Three.js-Latest-000000?logo=three.js&logoColor=fff&style=flat-square)](https://threejs.org/)
+[![Cannon.js](https://img.shields.io/badge/Cannon.js-Physics-FF0000?logo=cannon.js&logoColor=fff&style=flat-square)](https://github.com/schteppe/cannon.js)
 
 
 ---
