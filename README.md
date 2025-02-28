@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Logo do Jogo](assets/images/logo.png)
+![Logo do Jogo](assets/images/)
 
 [![Licença MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow.svg)](https://www.javascript.com/)
@@ -109,9 +109,9 @@ Um jogo 3D envolvente onde você controla uma cesta espacial e captura bolinhas 
 |------------|-----|
 | Three.js | Renderização 3D |
 | Cannon.js | Motor de Física |
-| JavaScript ES6+ | Lógica do Jogo |
-| HTML5 | Estrutura |
-| CSS3 | Estilização |
+| JavaScript | Lógica do Jogo |
+| HTML | Estrutura |
+| CSS | Estilização |
 
 </div>
 
@@ -121,31 +121,9 @@ Um jogo 3D envolvente onde você controla uma cesta espacial e captura bolinhas 
 - **Cannon.js**: Simulação de física
 - **dat.GUI**: Interface de debug
 
-## 🤝 Contribuindo
-
-Contribuições são sempre bem-vindas! Aqui está como você pode ajudar:
-
-1. 🍴 Faça um Fork do projeto
-2. 🔨 Crie uma Branch para sua Feature (`git checkout -b feature/AmazingFeature`)
-3. 🔃 Commit suas mudanças (`git commit -m 'Add: nova feature incrível'`)
-4. 📌 Push para a Branch (`git push origin feature/AmazingFeature`)
-5. 🔍 Abra um Pull Request
-
-## 📝 Licença
-
-Este projeto está sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
-
-## 👏 Créditos
-
-- Texturas de planetas: [NASA](https://www.nasa.gov/)
-- Efeitos sonoros: [OpenGameArt](https://opengameart.org/)
-- Inspiração: Jogos clássicos de arcade
-
 ---
 
 <div align="center">
-
-Desenvolvido com ❤️ por [Seu Nome]
 
 [⬆ Voltar ao topo](#-cesta-de-bolinhas)
 
