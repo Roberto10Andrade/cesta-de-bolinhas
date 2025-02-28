@@ -4,8 +4,7 @@
 
 ![Logo do Jogo](assets/images/logo.png)
 
-[![Licença MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow.svg)](https://www.javascript.com/)
+[[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow.svg)](https://www.javascript.com/)](https://shields.io/badge/JavaScript-F7DF1E?logo=JavaScript&logoColor=000&style=flat-square)
 [![Three.js](https://img.shields.io/badge/Three.js-Latest-black.svg)](https://threejs.org/)
 [![Cannon.js](https://img.shields.io/badge/Cannon.js-Physics-red.svg)](https://github.com/schteppe/cannon.js)
 
