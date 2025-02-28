@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            font-family: Arial, sans-serif;
+        }
+
+        .logo-container {
+            width: 800px;
+            height: 400px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 1.5s infinite alternate;
+        }
+
+        @keyframes twinkle {
+            from { opacity: 0.3; }
+            to { opacity: 1; }
+        }
+
+        .basket {
+            width: 160px;
+            height: 80px;
+            background: linear-gradient(90deg, #FFD700, #FFA000);
+            border: 3px solid #FFD700;
+            border-radius: 15px;
+            position: relative;
+            margin-bottom: 20px;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .basket::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 10px;
+            right: 10px;
+            height: 2px;
+            background: #FFC107;
+            box-shadow: 0 20px 0 #FFC107, 0 40px 0 #FFC107;
+        }
+
+        .ball {
+            width: 80px;
+            height: 80px;
+            background: radial-gradient(circle at 30% 30%, #4CAF50, #2E7D32);
+            border-radius: 50%;
+            position: relative;
+            margin-top: -40px;
+            box-shadow: 0 0 30px rgba(76, 175, 80, 0.5);
+        }
+
+        .ball::after {
+            content: '';
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+        }
+
+        .text {
+            text-align: center;
+            margin-top: 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .title {
+            font-size: 48px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            margin: 0;
+        }
+
+        .subtitle {
+            font-size: 24px;
+            color: #4CAF50;
+            text-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+            margin: 10px 0 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <div class="stars">
+            <!-- Stars will be added via JavaScript -->
+        </div>
+        <div class="basket"></div>
+        <div class="ball"></div>
+        <div class="text">
+            <h1 class="title">CESTA DE BOLINHAS</h1>
+            <p class="subtitle">SPACE EDITION</p>
+        </div>
+    </div>
+
+    <script>
+        // Adicionar estrelas aleatoriamente
+        const stars = document.querySelector('.stars');
+        for (let i = 0; i < 50; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.width = Math.random() * 3 + 'px';
+            star.style.height = star.style.width;
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.animationDelay = Math.random() * 2 + 's';
+            stars.appendChild(star);
+        }
+    </script>
+</body>
+</html> 

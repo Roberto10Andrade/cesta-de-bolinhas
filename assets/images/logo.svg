@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+    <!-- Fundo com gradiente espacial -->
+    <defs>
+        <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+        </linearGradient>
+        
+        <!-- Gradiente para a bola -->
+        <radialGradient id="ballGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+            <stop offset="0%" style="stop-color:#4CAF50;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#2E7D32;stop-opacity:1" />
+        </radialGradient>
+        
+        <!-- Gradiente para a cesta -->
+        <linearGradient id="basketGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#FFA000;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+
+    <!-- Fundo -->
+    <rect width="800" height="400" fill="url(#bgGradient)" />
+    
+    <!-- Estrelas de fundo -->
+    <g id="stars">
+        <circle cx="100" cy="50" r="2" fill="white" opacity="0.8" />
+        <circle cx="200" cy="150" r="1.5" fill="white" opacity="0.6" />
+        <circle cx="700" cy="80" r="2" fill="white" opacity="0.7" />
+        <circle cx="600" cy="200" r="1.8" fill="white" opacity="0.9" />
+        <circle cx="300" cy="100" r="1.7" fill="white" opacity="0.8" />
+        <circle cx="500" cy="150" r="2" fill="white" opacity="0.7" />
+        <circle cx="150" cy="250" r="1.5" fill="white" opacity="0.6" />
+        <circle cx="650" cy="300" r="1.8" fill="white" opacity="0.8" />
+    </g>
+
+    <!-- Cesta -->
+    <g transform="translate(300, 150)">
+        <!-- Base da cesta -->
+        <path d="M100,100 L200,100 C220,100 230,90 230,70 L230,50 C230,30 220,20 200,20 L100,20 C80,20 70,30 70,50 L70,70 C70,90 80,100 100,100 Z" 
+              fill="url(#basketGradient)" 
+              stroke="#FFD700" 
+              stroke-width="3"/>
+        
+        <!-- Detalhes da cesta -->
+        <path d="M90,40 L210,40" stroke="#FFC107" stroke-width="2" fill="none"/>
+        <path d="M90,60 L210,60" stroke="#FFC107" stroke-width="2" fill="none"/>
+        <path d="M90,80 L210,80" stroke="#FFC107" stroke-width="2" fill="none"/>
+    </g>
+
+    <!-- Bola com efeito espacial -->
+    <g transform="translate(350, 100)">
+        <circle cx="50" cy="50" r="40" fill="url(#ballGradient)" />
+        <path d="M30,30 Q50,70 70,30" stroke="rgba(255,255,255,0.5)" stroke-width="2" fill="none"/>
+        <circle cx="60" cy="35" r="5" fill="rgba(255,255,255,0.8)"/>
+    </g>
+
+    <!-- Texto do logo -->
+    <g transform="translate(200, 280)">
+        <text x="200" y="0" 
+              font-family="Arial, sans-serif" 
+              font-size="48" 
+              font-weight="bold" 
+              fill="#FFFFFF" 
+              text-anchor="middle">
+            CESTA DE BOLINHAS
+        </text>
+        <text x="200" y="30" 
+              font-family="Arial, sans-serif" 
+              font-size="24" 
+              fill="#4CAF50" 
+              text-anchor="middle">
+            SPACE EDITION
+        </text>
+    </g>
+
+    <!-- Efeito de brilho -->
+    <circle cx="410" cy="85" r="5" fill="white" opacity="0.8">
+        <animate attributeName="opacity" 
+                 values="0.8;0.2;0.8" 
+                 dur="2s" 
+                 repeatCount="indefinite"/>
+    </circle>
+</svg> 

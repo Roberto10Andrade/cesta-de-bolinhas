@@ -203,11 +203,15 @@ canvas {
 }
 
 .confetti {
-    position: absolute;
+    position: fixed;
+    z-index: 9999;
     width: 10px;
     height: 10px;
     background: #FFD700;
-    animation: confetti 3s ease-out infinite;
+    animation: confetti 3s ease-out forwards;
+    transform-origin: center;
+    pointer-events: none;
+    will-change: transform;
 }
 
 .modal {
@@ -393,11 +397,23 @@ canvas {
 
 @keyframes confetti {
     0% {
-        transform: translateY(0) rotate(0deg);
+        transform: translateY(-10vh) translateX(0) rotate(0deg);
         opacity: 1;
     }
+    25% {
+        transform: translateY(25vh) translateX(100px) rotate(360deg);
+        opacity: 0.9;
+    }
+    50% {
+        transform: translateY(50vh) translateX(-100px) rotate(720deg);
+        opacity: 0.8;
+    }
+    75% {
+        transform: translateY(75vh) translateX(50px) rotate(1080deg);
+        opacity: 0.7;
+    }
     100% {
-        transform: translateY(100vh) rotate(720deg);
+        transform: translateY(100vh) translateX(-50px) rotate(1440deg);
         opacity: 0;
     }
 }

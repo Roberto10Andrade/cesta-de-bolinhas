@@ -919,24 +919,80 @@ class BallGame {
     }
 
     createConfetti() {
-        const colors = ['#FFD700', '#FFA500', '#4CAF50', '#2196F3', '#9C27B0'];
-        const confettiCount = 100;
+        // Limpar confetes anteriores
+        const oldConfetti = document.querySelectorAll('.confetti');
+        oldConfetti.forEach(c => c.remove());
+
+        const colors = [
+            '#FFD700', // Dourado
+            '#FFA500', // Laranja
+            '#4CAF50', // Verde
+            '#2196F3', // Azul
+            '#9C27B0', // Roxo
+            '#FF1493', // Rosa
+            '#00FFFF'  // Ciano
+        ];
+        const confettiCount = 150;
+        const shapes = ['square', 'circle', 'triangle'];
+        const container = document.createElement('div');
+        container.style.position = 'fixed';
+        container.style.top = '0';
+        container.style.left = '0';
+        container.style.width = '100%';
+        container.style.height = '100%';
+        container.style.pointerEvents = 'none';
+        container.style.zIndex = '9999';
+        document.body.appendChild(container);
 
         for (let i = 0; i < confettiCount; i++) {
             const confetti = document.createElement('div');
             confetti.className = 'confetti';
+            
+            // Posição inicial aleatória
             confetti.style.left = Math.random() * 100 + 'vw';
-            confetti.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            confetti.style.top = '-20px';
+            
+            // Tamanho aleatório
+            const size = Math.random() * 10 + 5;
+            confetti.style.width = size + 'px';
+            confetti.style.height = size + 'px';
+            
+            // Cor aleatória
             confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-            confetti.style.width = (Math.random() * 10 + 5) + 'px';
-            confetti.style.height = confetti.style.width;
-            document.body.appendChild(confetti);
+            
+            // Forma aleatória
+            const shape = shapes[Math.floor(Math.random() * shapes.length)];
+            if (shape === 'circle') {
+                confetti.style.borderRadius = '50%';
+            } else if (shape === 'triangle') {
+                confetti.style.width = '0';
+                confetti.style.height = '0';
+                confetti.style.backgroundColor = 'transparent';
+                confetti.style.borderLeft = size/2 + 'px solid transparent';
+                confetti.style.borderRight = size/2 + 'px solid transparent';
+                confetti.style.borderBottom = size + 'px solid ' + colors[Math.floor(Math.random() * colors.length)];
+            }
+            
+            // Duração e atraso aleatórios
+            const duration = Math.random() * 2 + 2;
+            confetti.style.animationDuration = duration + 's';
+            confetti.style.animationDelay = Math.random() * 0.5 + 's';
+            
+            // Adicionar brilho
+            confetti.style.boxShadow = '0 0 10px ' + colors[Math.floor(Math.random() * colors.length)];
+            
+            container.appendChild(confetti);
 
             // Remover confete após a animação
-            confetti.addEventListener('animationend', () => {
+            setTimeout(() => {
                 confetti.remove();
-            });
+            }, (duration + 0.5) * 1000);
         }
+
+        // Remover o container após todos os confetes terminarem
+        setTimeout(() => {
+            container.remove();
+        }, 5000);
     }
 
     restartGame() {
