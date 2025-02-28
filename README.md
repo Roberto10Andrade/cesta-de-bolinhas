@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Logo do Jogo](assets/images/)
+![Logo do Jogo](assets/images/logo.png)
 
 [![Licença MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow.svg)](https://www.javascript.com/)
