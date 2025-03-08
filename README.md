@@ -121,6 +121,11 @@ Um jogo 3D envolvente onde você controla uma cesta espacial e captura bolinhas 
 
 ---
 
+## Autor
+
+👤 **Roberto Andrade**
+GitHub: [@Roberto10Andrade](https://github.com/Roberto10Andrade)
+
 <div align="center">
 
 [⬆ Voltar ao topo](#-cesta-de-bolinhas)
